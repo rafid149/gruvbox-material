@@ -269,7 +269,7 @@ if has('nvim')
   highlight! link DiagnosticVirtualTextWarn VirtualTextWarning
   highlight! link DiagnosticVirtualTextInfo VirtualTextInfo
   highlight! link DiagnosticVirtualTextHint VirtualTextHint
-  highlight! link DiagnosticUnderlineError ErrorText
+  " highlight! link DiagnosticUnderlineError ErrorText
   highlight! link DiagnosticUnderlineWarn WarningText
   highlight! link DiagnosticUnderlineInfo InfoText
   highlight! link DiagnosticUnderlineHint HintText
@@ -430,12 +430,12 @@ else
   call gruvbox_material#highlight('PurpleSign', s:palette.purple, s:palette.bg2)
 endif
 if s:configuration.diagnostic_text_highlight
-  call gruvbox_material#highlight('ErrorText', s:palette.none, s:palette.bg_visual_red, 'undercurl', s:palette.red)
+  call gruvbox_material#highlight('ErrorText', s:palette.none, s:palette.bg_visual_red, 'none', s:palette.red)
   call gruvbox_material#highlight('WarningText', s:palette.none, s:palette.bg_visual_yellow, 'undercurl', s:palette.yellow)
   call gruvbox_material#highlight('InfoText', s:palette.none, s:palette.bg_visual_blue, 'undercurl', s:palette.blue)
   call gruvbox_material#highlight('HintText', s:palette.none, s:palette.bg_visual_green, 'undercurl', s:palette.green)
 else
-  call gruvbox_material#highlight('ErrorText', s:palette.none, s:palette.none, 'undercurl', s:palette.red)
+  call gruvbox_material#highlight('ErrorText', s:palette.none, s:palette.none, 'none', s:palette.red)
   call gruvbox_material#highlight('WarningText', s:palette.none, s:palette.none, 'undercurl', s:palette.yellow)
   call gruvbox_material#highlight('InfoText', s:palette.none, s:palette.none, 'undercurl', s:palette.blue)
   call gruvbox_material#highlight('HintText', s:palette.none, s:palette.none, 'undercurl', s:palette.green)
